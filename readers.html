@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -76,6 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -321,10 +331,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -332,7 +342,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -375,255 +385,9 @@ document.write(`
                   
   <section id="readers">
 <h1>Readers<a class="headerlink" href="#readers" title="Permalink to this heading">#</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="pyathena.read_vtk">
-<span class="sig-prename descclassname"><span class="pre">pyathena.</span></span><span class="sig-name descname"><span class="pre">read_vtk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id0_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_vtk.html#read_vtk"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.read_vtk" title="Permalink to this definition">#</a></dt>
-<dd><p>Convenience wrapper function to read Athena vtk output file
-using AthenaDataSet class.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<em>str</em>) – Name of the file to open, including extension</p></li>
-<li><p><strong>id0_only</strong> (<em>bool</em>) – Flag to enforce to read vtk file in id0 directory only.
-Default value is False.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>ds</strong></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="athenadataset.html#pyathena.AthenaDataSet" title="pyathena.AthenaDataSet">AthenaDataSet</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyathena.read_athinput">
-<span class="sig-prename descclassname"><span class="pre">pyathena.</span></span><span class="sig-name descname"><span class="pre">read_athinput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_namedtuple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_athinput.html#read_athinput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.read_athinput" title="Permalink to this definition">#</a></dt>
-<dd><p>Function to read athinput and configure block from simulation log</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<em>string</em>) – Name of the file to open, including extension</p></li>
-<li><p><strong>verbose</strong> (<em>bool</em>) – Print verbose message</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>par</strong> – Each item is a dictionary or namedtuple containing individual input
-block.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict or namedtuple</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyathena.read_hst">
-<span class="sig-prename descclassname"><span class="pre">pyathena.</span></span><span class="sig-name descname"><span class="pre">read_hst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_hst.html#read_hst"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.read_hst" title="Permalink to this definition">#</a></dt>
-<dd><p>Function to read athena history file and pickle</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<em>string</em>) – Name of the file to open, including extension</p></li>
-<li><p><strong>force_override</strong> (<em>bool</em>) – Flag to force read of hst file even when pickle exists</p></li>
-<li><p><strong>verbose</strong> (<em>bool</em>) – Print verbose messages</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>hst</strong> – Each column contains time series data</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>pandas dataframe</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyathena.read_sphst">
-<span class="sig-prename descclassname"><span class="pre">pyathena.</span></span><span class="sig-name descname"><span class="pre">read_sphst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['time',</span> <span class="pre">'mass',</span> <span class="pre">'x1',</span> <span class="pre">'x2',</span> <span class="pre">'x3',</span> <span class="pre">'v1',</span> <span class="pre">'v2',</span> <span class="pre">'v3',</span> <span class="pre">'age',</span> <span class="pre">'mage',</span> <span class="pre">'mdot',</span> <span class="pre">'mhist',</span> <span class="pre">'active',</span> <span class="pre">'metal0',</span> <span class="pre">'metal1',</span> <span class="pre">'metal2',</span> <span class="pre">'metal3',</span> <span class="pre">'metal4',</span> <span class="pre">'metal5',</span> <span class="pre">'metal6']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_sphst.html#read_sphst"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.read_sphst" title="Permalink to this definition">#</a></dt>
-<dd><p>Function to read athena history file and pickle</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<em>string</em>) – Name of the file to open, including extension</p></li>
-<li><p><strong>force_override</strong> (<em>bool</em>) – Flag to force read of hst file even when pickle exists</p></li>
-<li><p><strong>verbose</strong> (<em>bool</em>) – Print verbose messages</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>hst</strong> – Each column contains time series data</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>pandas dataframe</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyathena.read_timeit">
-<span class="sig-prename descclassname"><span class="pre">pyathena.</span></span><span class="sig-name descname"><span class="pre">read_timeit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_timeit.html#read_timeit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.read_timeit" title="Permalink to this definition">#</a></dt>
-<dd><p>Function to read timeit log file and pickle</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<em>string</em>) – Name of the file to open, including extension</p></li>
-<li><p><strong>force_override</strong> (<em>bool</em>) – Flag to force read of hst file even when pickle exists</p></li>
-<li><p><strong>verbose</strong> (<em>bool</em>) – Print verbose messages</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>hst</strong> – Each column contains time series data</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>pandas dataframe</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyathena.read_starpar_vtk">
-<span class="sig-prename descclassname"><span class="pre">pyathena.</span></span><span class="sig-name descname"><span class="pre">read_starpar_vtk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_starpar_vtk.html#read_starpar_vtk"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.read_starpar_vtk" title="Permalink to this definition">#</a></dt>
-<dd><p>Read athena starpar vtk output.
-Returns a dictionary containing mass, position, velocity, age, etc.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<em>string</em>) – Name of the file to open, including extension</p></li>
-<li><p><strong>force_override</strong> (<em>bool</em>) – Flag to force read of hst file even when pickle exists</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>df</strong> – Pandas DataFrame object</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyathena.read_zprof">
-<span class="sig-prename descclassname"><span class="pre">pyathena.</span></span><span class="sig-name descname"><span class="pre">read_zprof</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_zprof.html#read_zprof"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.read_zprof" title="Permalink to this definition">#</a></dt>
-<dd><p>Function to read one zprof file and pickle</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<em>string</em>) – Name of the file to open, including extension</p></li>
-<li><p><strong>force_override</strong> (<em>bool</em>) – Flag to force read of zprof file even when pickle exists</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>df</strong></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>pandas dataframe</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyathena.read_zprof_all">
-<span class="sig-prename descclassname"><span class="pre">pyathena.</span></span><span class="sig-name descname"><span class="pre">read_zprof_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dirname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'whole'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savdir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_zprof.html#read_zprof_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.read_zprof_all" title="Permalink to this definition">#</a></dt>
-<dd><p>Function to read all zprof files in directory and make a Dataset object
-and write to a NetCDF file.</p>
-<p>Note: An xarray DataArray holds a single multi-dimensional variable and its
-coordinates, while a xarray Dataset holds multiple variables that
-potentially share the same coordinates.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>dirname</strong> (<em>str</em>) – Name of the directory where zprof files are located</p></li>
-<li><p><strong>problem_id</strong> (<em>str</em>) – Prefix of zprof files</p></li>
-<li><p><strong>phase</strong> (<em>str</em>) – Name of thermal phase
-ex) whole, phase1, …, phase5 (cold, intermediate, warm, hot1, hot2)</p></li>
-<li><p><strong>savdir</strong> (<em>str</em>) – Name of directory to save pickle data as a netcdf file
-Default value is dirname.</p></li>
-<li><p><strong>force_override</strong> (<em>bool</em>) – Flag to force read of hst file even when netcdf exists</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>ds</strong></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>xarray dataset</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyathena.read_rst">
-<span class="sig-prename descclassname"><span class="pre">pyathena.</span></span><span class="sig-name descname"><span class="pre">read_rst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_rst.html#read_rst"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.read_rst" title="Permalink to this definition">#</a></dt>
-<dd><p>Wrapper function to return RestartHandler class to read/handle restart file</p>
-</dd></dl>
-
 </section>
 <section id="restarthandler">
 <h1>RestartHandler<a class="headerlink" href="#restarthandler" title="Permalink to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="pyathena.RestartHandler">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyathena.</span></span><span class="sig-name descname"><span class="pre">RestartHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_rst.html#RestartHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.RestartHandler" title="Permalink to this definition">#</a></dt>
-<dd><dl class="py method">
-<dt class="sig sig-object py" id="pyathena.RestartHandler.cut_z">
-<span class="sig-name descname"><span class="pre">cut_z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zmax</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_rst.html#RestartHandler.cut_z"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.RestartHandler.cut_z" title="Permalink to this definition">#</a></dt>
-<dd><p>Cut vertical domain and store it to data_target</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyathena.RestartHandler.degrade">
-<span class="sig-name descname"><span class="pre">degrade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check_divB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_rst.html#RestartHandler.degrade"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.RestartHandler.degrade" title="Permalink to this definition">#</a></dt>
-<dd><p>Degrade data and store it to data_target</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyathena.RestartHandler.pop_scalar">
-<span class="sig-name descname"><span class="pre">pop_scalar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ipop</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_rst.html#RestartHandler.pop_scalar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.RestartHandler.pop_scalar" title="Permalink to this definition">#</a></dt>
-<dd><p>Pop scalar</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyathena.RestartHandler.read">
-<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_rst.html#RestartHandler.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.RestartHandler.read" title="Permalink to this definition">#</a></dt>
-<dd><p>Read full data</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyathena.RestartHandler.refine">
-<span class="sig-name descname"><span class="pre">refine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check_divB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_rst.html#RestartHandler.refine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.RestartHandler.refine" title="Permalink to this definition">#</a></dt>
-<dd><p>Refine data and store it to data_target</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyathena.RestartHandler.remove_all_targets">
-<span class="sig-name descname"><span class="pre">remove_all_targets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_rst.html#RestartHandler.remove_all_targets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.RestartHandler.remove_all_targets" title="Permalink to this definition">#</a></dt>
-<dd><p>Remove previously manipulated data</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyathena.RestartHandler.reset_grids">
-<span class="sig-name descname"><span class="pre">reset_grids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ngrid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_rst.html#RestartHandler.reset_grids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.RestartHandler.reset_grids" title="Permalink to this definition">#</a></dt>
-<dd><p>Reset grid list with new grid size</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>ngrid</strong> (<em>array like</em>) – grid dimension [nx, ny, nz]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyathena.RestartHandler.reset_par">
-<span class="sig-name descname"><span class="pre">reset_par</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_rst.html#RestartHandler.reset_par"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.RestartHandler.reset_par" title="Permalink to this definition">#</a></dt>
-<dd><p>Reset input parameters. May not be able to handle this fully automatically</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyathena.RestartHandler.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outdir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'newrst'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">itime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyathena/io/read_rst.html#RestartHandler.write"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyathena.RestartHandler.write" title="Permalink to this definition">#</a></dt>
-<dd><p>Write target data</p>
-</dd></dl>
-
-</dd></dl>
-
 </section>
 
     <script type="text/x-thebe-config">
@@ -651,11 +415,10 @@ Default value is dirname.</p></li>
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="athenadataset.html"
@@ -675,10 +438,7 @@ Default value is dirname.</p></li>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -743,8 +503,8 @@ By Jeong-Gyu Kim, Chang-Goo Kim, Sanghyuk Moon
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
